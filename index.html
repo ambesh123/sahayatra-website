@@ -34,122 +34,7 @@
 
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-green: #2ba84a;
-      --primary-blue: #1c4dab;
-      --background: #f7f9fc;
-      --text-color: #333;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--background);
-      color: var(--text-color);
-    }
-    header {
-      background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
-      color: white;
-      padding: 2rem 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    .logo {
-      max-width: 180px;
-      height: auto;
-      margin-bottom: 1rem;
-      min-width: 100px;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem 1.5rem;
-      background: #ffffff;
-    }
-    .hero img.logo {
-      height: 80px;
-      margin-bottom: 1.5rem;
-    }
-    .hero img.preview {
-      max-width: 320px;
-      margin-bottom: 2rem;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin: 0 0 1rem;
-    }
-    .hero p {
-      max-width: 600px;
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-    .download-btn {
-      background-color: var(--primary-blue);
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .features {
-      padding: 4rem 1.5rem;
-      background: #eef1f8;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
-    .feature-card {
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      padding: 2rem;
-      text-align: center;
-    }
-    .feature-card img {
-      height: 64px;
-      margin-bottom: 1rem;
-    }
-    .feature-card h3 {
-      margin: 0.5rem 0;
-      font-size: 1.25rem;
-      color: var(--primary-green);
-    }
-    .footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #1f2937;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-    @media (min-width: 768px) {
-      .hero {
-        flex-direction: row;
-        justify-content: center;
-        gap: 3rem;
-      }
-      .hero img.preview {
-        margin-bottom: 0;
-      }
-      .hero-content {
-        max-width: 480px;
-        text-align: left;
-      }
-      .hero img.logo {
-        margin-bottom: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
@@ -163,7 +48,13 @@
     <div class="hero-content">
       <h2>Join the smarter way to commute</h2>
       <p>Sahayatra connects daily commuters to share rides efficiently, reduce travel costs, and contribute to a greener planet. Whether you're a rider or a driver, make your journey better with Sahayatra.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra" class="download-btn">Download on Play Store</a>
+      <div class="download-container">
+        <a href="https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra" class="download-btn">Download on Play Store</a>
+      </div>
+      <div class="made-in-india">
+        <img src="assets/made-in-india.png" alt="Made in India" class="made-in-india-logo">
+        <p class="made-in-india-text">A proud initiative made in India to support eco-friendly commuting.</p>
+      </div>
     </div>
   </section>
 
