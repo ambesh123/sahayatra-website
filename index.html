@@ -35,31 +35,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-
-  <style>
-    .promo-banner {
-      background: linear-gradient(90deg, #8fd3f4, #84fab0); /* Soothing blue-green gradient */
-      color: #234567;
-      font-weight: bold;
-      text-align: center;
-      padding: 15px;
-      border-radius: 10px;
-      margin: 20px auto;
-      width: 90%;
-      max-width: 600px;
-      animation: pulse 2s infinite;
-      box-shadow: 0 2px 12px 0 rgba(132, 250, 176, 0.15);
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -68,7 +43,7 @@
     <p>Smarter. Safer. Sustainable Carpools.</p>
 
     <!-- Promotional Banner -->
-    <div class="promo-banner">
+    <div class="promo-banner" id="promoBanner">
       🚗 Book any ride for just ₹5!
     </div>
   </header>
@@ -78,7 +53,7 @@
     <div class="hero-content">
       <h2>Join the smarter way to commute</h2>
       <p>Sahayatra connects daily commuters to share rides efficiently, reduce travel costs, and contribute to a greener planet. Whether you're a rider or a driver, make your journey better with Sahayatra.</p>
-      <div class="download-container">
+      <div id="download" class="download-container">
         <a href="https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra" class="download-btn">Download on Play Store</a>
       </div>
       <div class="made-in-india">
@@ -109,5 +84,24 @@
   <footer class="footer">
     &copy; 2025 Sahayatra. All rights reserved.
   </footer>
+  <script>
+    document.getElementById("promoBanner").addEventListener("click", function () {
+      const target = document.getElementById("download");
+      const yOffset = -100; // Adjust this offset for centering
+      const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+
+      // Add animation class
+      target.classList.add("animate-focus");
+
+      // Remove it after animation ends
+      setTimeout(() => {
+        target.classList.remove("animate-focus");
+      }, 1600);
+    });
+  </script>
+
+
 </body>
 </html>
