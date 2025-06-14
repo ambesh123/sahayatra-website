@@ -49,6 +49,8 @@
       max-width: 600px;
       animation: pulse 2s infinite;
       box-shadow: 0 2px 12px 0 rgba(132, 250, 176, 0.15);
+      pointer-events: auto;
+      cursor: default;
     }
 
     @keyframes pulse {
@@ -68,9 +70,9 @@
     <p>Smarter. Safer. Sustainable Carpools.</p>
 
     <!-- Promotional Banner -->
-    <div class="promo-banner">
+    <a href="#download-btn" class="promo-banner" style="display:block; text-decoration:none;">
       🚗 Book any ride for just ₹5!
-    </div>
+    </a>
   </header>
 
   <section class="hero">
@@ -79,7 +81,7 @@
       <h2>Join the smarter way to commute</h2>
       <p>Sahayatra connects daily commuters to share rides efficiently, reduce travel costs, and contribute to a greener planet. Whether you're a rider or a driver, make your journey better with Sahayatra.</p>
       <div class="download-container">
-        <a href="https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra" class="download-btn">Download on Play Store</a>
+        <a id="download-btn" href="https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra" class="download-btn">Download on Play Store</a>
       </div>
       <div class="made-in-india">
         <img src="assets/made-in-india.png" alt="Made in India" class="made-in-india-logo">
