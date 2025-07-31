@@ -99,14 +99,14 @@ header p {
     padding: 2rem 1rem;
     background: #1f2937;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .footer-content {
   max-width: 800px;
   margin: auto;
 }
 .footer-nav {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 .footer-nav a {
   margin: 0 10px;
