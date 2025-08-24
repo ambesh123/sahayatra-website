@@ -32,9 +32,6 @@
   <meta name="twitter:description" content="Join Sahayatra to travel safer, cheaper, and greener. Find and share rides across your city in just a few taps." />
   <meta name="twitter:image" content="https://sahayatra.net/assets/app-preview.png" />
 
-  <!-- Redirect users to Playstore after 2 seconds -->
-  <meta http-equiv="refresh" content="2;url=https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -96,23 +93,8 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("promoBanner").addEventListener("click", function () {
-      const target = document.getElementById("download");
-      const yOffset = -100; // Adjust this offset for centering
-      const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({ top: y, behavior: 'smooth' });
-
-      // Add animation class
-      target.classList.add("animate-focus");
-
-      // Remove it after animation ends
-      setTimeout(() => {
-        target.classList.remove("animate-focus");
-      }, 1600);
-    });
-  </script>
+  <script src="scripts/redirect.js"></script>
+  <script src="scripts/promo-banner.js"></script>
 
 
 </body>

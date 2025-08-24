@@ -240,3 +240,49 @@ header p {
   text-decoration: underline;
 }
 
+/* Redirect Popup Styling */
+.redirect-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.redirect-popup p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.redirect-popup .timer {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.redirect-popup button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.redirect-popup button:hover {
+  background: #e60000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
