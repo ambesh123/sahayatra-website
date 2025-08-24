@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Play Store Link
+  const playStoreMarketLink = "market://details?id=com.sahayatra.sahayatra";
   const playStoreLink = "https://play.google.com/store/apps/details?id=com.sahayatra.sahayatra";
 
   // Create popup
@@ -18,7 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
     timerEl.textContent = countdown;
     if (countdown <= 0) {
       clearInterval(interval);
-      window.location.href = playStoreLink;
+
+      // Preferred: try to open in Play Store app
+      window.location.href = playStoreMarketLink;  
+      // Fallback: if "market://" fails, open in browser
+      setTimeout(() => {
+        window.location.href = playStoreLink;
+      }, 500);
     }
   }, 1000);
 
